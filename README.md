@@ -1,3 +1,24 @@
+CLONE OP REPO https://github.com/Azure-Samples/azure-cosmos-db-mongodb-java-getting-started
+
+Modified for My testing.
+
+Update the mongodb connection string in the Programs.java file.
+
+build with:
+* mvn package
+
+run with:
+* mvn exec:java -D exec.mainClass=GetStarted.Program (to insert 400 records and take timing)
+* mvn exec:java -D exec.mainClass=GetStarted.Program -Dexec.args="queryEstate 500090" (to run some queries for this estate number)
+* mvn exec:java -D exec.mainClass=GetStarted.Program -Dexec.args="queryUser userId20" (to run some queries for this userId)
+* mvn exec:java -D exec.mainClass=GetStarted.Program -Dexec.args="delete" (to delete all records from the DB)
+
+
+
+
+
+
+
 ---
 services: cosmos-db
 platforms: java
@@ -17,7 +38,7 @@ Azure Cosmos DB is a fully managed globally distributed, multi-model database se
 
 * Then, clone this repository using `git clone git@github.com:azure-samples/azure-cosmosdb-for-mongodb-api-java-getting-started.git`
 
-* Next, substitute the endpoint and authorization key in Program.java with your Cosmos DB account's values. 
+* Next, substitute the endpoint and authorization key in Program.java with your Cosmos DB account's values.
 
 * From a command prompt or shell, run `mvn package` to compile and resolve dependencies.
 
